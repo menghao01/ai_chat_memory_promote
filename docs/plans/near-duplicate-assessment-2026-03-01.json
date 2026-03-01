@@ -1,0 +1,405 @@
+{
+  "generated_at_utc": "2026-03-01T10:17:45.000920+00:00",
+  "mode": "offline_assessment_only",
+  "enable_by_default": false,
+  "scope": {
+    "notes_files_count": 15,
+    "notes_files": [
+      "notes/24.07.22.md",
+      "notes/25.12.02.md",
+      "notes/25.12.06.md",
+      "notes/chat-memo_1_20251212.md",
+      "notes/chat-memo_1_20251229212539.md",
+      "notes/chat-memo_1_20251229213804.md",
+      "notes/chat-memo_1_20260105202854.md",
+      "notes/chat-memo_1_20260107142903.md",
+      "notes/chat-memo_1_20260110212909.md",
+      "notes/chat-memo_1_20260201095705.md",
+      "notes/chat-memo_1_20260224103915.md",
+      "notes/chat-memo_2_20251213.md",
+      "notes/daily-log-2025-12-05.md",
+      "notes/learning-goals.md",
+      "notes/project-ideas.md"
+    ],
+    "raw_chunks_before_exact_dedup": 156,
+    "chunks_after_exact_dedup": 123,
+    "exact_dedup_summary": {
+      "before": 156,
+      "after": 123,
+      "removed": 33,
+      "dedup_ratio": 0.21153846153846154
+    }
+  },
+  "near_duplicate_rule_guards": [
+    "same chunk_type only",
+    "both chunk length >= min_chars",
+    "length ratio >= len_ratio_min",
+    "prefix similarity >= prefix_threshold (first 120 normalized chars)",
+    "full normalized similarity >= sim_threshold"
+  ],
+  "base_after_exact_dedup": {
+    "stats": {
+      "total_chunks": 123,
+      "small_chunks": 26,
+      "large_chunks": 20,
+      "avg_chars": 686.5772357723578,
+      "dup_ratio_proxy": 0.0
+    },
+    "quality_gate": {
+      "passed": true,
+      "failed_rules": [],
+      "ratios": {
+        "small_ratio": 0.21138211382113822,
+        "large_ratio": 0.16260162601626016,
+        "dup_ratio_proxy": 0.0
+      },
+      "thresholds": {
+        "small_ratio_max": 0.35,
+        "large_ratio_max": 0.35,
+        "dup_ratio_proxy_max": 0.4,
+        "min_total_chunks": 1
+      }
+    }
+  },
+  "sensitivity": [
+    {
+      "config": {
+        "name": "strict_recommended",
+        "sim_threshold": 0.97,
+        "len_ratio_min": 0.92,
+        "prefix_threshold": 0.93,
+        "min_chars": 180
+      },
+      "candidate_pairs": 1,
+      "candidate_groups": 1,
+      "would_remove_chunks": 1,
+      "remove_ratio": 0.00813,
+      "before": {
+        "stats": {
+          "total_chunks": 123,
+          "small_chunks": 26,
+          "large_chunks": 20,
+          "avg_chars": 686.5772357723578,
+          "dup_ratio_proxy": 0.0
+        },
+        "quality_gate": {
+          "passed": true,
+          "failed_rules": [],
+          "ratios": {
+            "small_ratio": 0.21138211382113822,
+            "large_ratio": 0.16260162601626016,
+            "dup_ratio_proxy": 0.0
+          },
+          "thresholds": {
+            "small_ratio_max": 0.35,
+            "large_ratio_max": 0.35,
+            "dup_ratio_proxy_max": 0.4,
+            "min_total_chunks": 1
+          }
+        }
+      },
+      "after_simulated": {
+        "stats": {
+          "total_chunks": 122,
+          "small_chunks": 26,
+          "large_chunks": 20,
+          "avg_chars": 690.655737704918,
+          "dup_ratio_proxy": 0.0
+        },
+        "quality_gate": {
+          "passed": true,
+          "failed_rules": [],
+          "ratios": {
+            "small_ratio": 0.21311475409836064,
+            "large_ratio": 0.16393442622950818,
+            "dup_ratio_proxy": 0.0
+          },
+          "thresholds": {
+            "small_ratio_max": 0.35,
+            "large_ratio_max": 0.35,
+            "dup_ratio_proxy_max": 0.4,
+            "min_total_chunks": 1
+          }
+        }
+      },
+      "delta": {
+        "total_chunks_delta": -1,
+        "small_ratio_delta": 0.001733,
+        "large_ratio_delta": 0.001333,
+        "dup_ratio_proxy_delta": 0.0,
+        "avg_chars_delta": 4.08
+      },
+      "candidate_samples": [
+        {
+          "sim_ratio": 0.992084,
+          "len_ratio": 0.994737,
+          "prefix_ratio": 1.0,
+          "a": {
+            "filename": "chat-memo_1_20260105202854.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+          },
+          "b": {
+            "filename": "chat-memo_1_20260107142903.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "balanced_candidate",
+        "sim_threshold": 0.96,
+        "len_ratio_min": 0.9,
+        "prefix_threshold": 0.92,
+        "min_chars": 180
+      },
+      "candidate_pairs": 2,
+      "candidate_groups": 2,
+      "would_remove_chunks": 2,
+      "remove_ratio": 0.01626,
+      "before": {
+        "stats": {
+          "total_chunks": 123,
+          "small_chunks": 26,
+          "large_chunks": 20,
+          "avg_chars": 686.5772357723578,
+          "dup_ratio_proxy": 0.0
+        },
+        "quality_gate": {
+          "passed": true,
+          "failed_rules": [],
+          "ratios": {
+            "small_ratio": 0.21138211382113822,
+            "large_ratio": 0.16260162601626016,
+            "dup_ratio_proxy": 0.0
+          },
+          "thresholds": {
+            "small_ratio_max": 0.35,
+            "large_ratio_max": 0.35,
+            "dup_ratio_proxy_max": 0.4,
+            "min_total_chunks": 1
+          }
+        }
+      },
+      "after_simulated": {
+        "stats": {
+          "total_chunks": 121,
+          "small_chunks": 26,
+          "large_chunks": 20,
+          "avg_chars": 694.7520661157025,
+          "dup_ratio_proxy": 0.0
+        },
+        "quality_gate": {
+          "passed": true,
+          "failed_rules": [],
+          "ratios": {
+            "small_ratio": 0.21487603305785125,
+            "large_ratio": 0.1652892561983471,
+            "dup_ratio_proxy": 0.0
+          },
+          "thresholds": {
+            "small_ratio_max": 0.35,
+            "large_ratio_max": 0.35,
+            "dup_ratio_proxy_max": 0.4,
+            "min_total_chunks": 1
+          }
+        }
+      },
+      "delta": {
+        "total_chunks_delta": -2,
+        "small_ratio_delta": 0.003494,
+        "large_ratio_delta": 0.002688,
+        "dup_ratio_proxy_delta": 0.0,
+        "avg_chars_delta": 8.17
+      },
+      "candidate_samples": [
+        {
+          "sim_ratio": 0.992084,
+          "len_ratio": 0.994737,
+          "prefix_ratio": 1.0,
+          "a": {
+            "filename": "chat-memo_1_20260105202854.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+          },
+          "b": {
+            "filename": "chat-memo_1_20260107142903.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+          }
+        },
+        {
+          "sim_ratio": 0.964103,
+          "len_ratio": 1.0,
+          "prefix_ratio": 1.0,
+          "a": {
+            "filename": "chat-memo_1_20251229213804.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: KK，你怎么看待你的这本书《失控》 我打算读一读它，因为它一定和你本人一样独特而精彩 URL: https://chat.deepseek.com/a/chat/s/822aa779-7172-4c12-8fa4-2c6ce20b1793 Platform: DeepSeek Created: 2025-12-29 21:37:"
+          },
+          "b": {
+            "filename": "chat-memo_2_20251213.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: KK，你怎么看待你的这本书《失控》 我打算读一读它，因为它一定和你本人一样独特而精彩 URL: https://chat.deepseek.com/a/chat/s/822aa779-7172-4c12-8fa4-2c6ce20b1793 Platform: DeepSeek Created: 2025-12-12 15:48:"
+          }
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "wider_candidate",
+        "sim_threshold": 0.95,
+        "len_ratio_min": 0.88,
+        "prefix_threshold": 0.9,
+        "min_chars": 160
+      },
+      "candidate_pairs": 2,
+      "candidate_groups": 2,
+      "would_remove_chunks": 2,
+      "remove_ratio": 0.01626,
+      "before": {
+        "stats": {
+          "total_chunks": 123,
+          "small_chunks": 26,
+          "large_chunks": 20,
+          "avg_chars": 686.5772357723578,
+          "dup_ratio_proxy": 0.0
+        },
+        "quality_gate": {
+          "passed": true,
+          "failed_rules": [],
+          "ratios": {
+            "small_ratio": 0.21138211382113822,
+            "large_ratio": 0.16260162601626016,
+            "dup_ratio_proxy": 0.0
+          },
+          "thresholds": {
+            "small_ratio_max": 0.35,
+            "large_ratio_max": 0.35,
+            "dup_ratio_proxy_max": 0.4,
+            "min_total_chunks": 1
+          }
+        }
+      },
+      "after_simulated": {
+        "stats": {
+          "total_chunks": 121,
+          "small_chunks": 26,
+          "large_chunks": 20,
+          "avg_chars": 694.7520661157025,
+          "dup_ratio_proxy": 0.0
+        },
+        "quality_gate": {
+          "passed": true,
+          "failed_rules": [],
+          "ratios": {
+            "small_ratio": 0.21487603305785125,
+            "large_ratio": 0.1652892561983471,
+            "dup_ratio_proxy": 0.0
+          },
+          "thresholds": {
+            "small_ratio_max": 0.35,
+            "large_ratio_max": 0.35,
+            "dup_ratio_proxy_max": 0.4,
+            "min_total_chunks": 1
+          }
+        }
+      },
+      "delta": {
+        "total_chunks_delta": -2,
+        "small_ratio_delta": 0.003494,
+        "large_ratio_delta": 0.002688,
+        "dup_ratio_proxy_delta": 0.0,
+        "avg_chars_delta": 8.17
+      },
+      "candidate_samples": [
+        {
+          "sim_ratio": 0.992084,
+          "len_ratio": 0.994737,
+          "prefix_ratio": 1.0,
+          "a": {
+            "filename": "chat-memo_1_20260105202854.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+          },
+          "b": {
+            "filename": "chat-memo_1_20260107142903.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+          }
+        },
+        {
+          "sim_ratio": 0.964103,
+          "len_ratio": 1.0,
+          "prefix_ratio": 1.0,
+          "a": {
+            "filename": "chat-memo_1_20251229213804.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: KK，你怎么看待你的这本书《失控》 我打算读一读它，因为它一定和你本人一样独特而精彩 URL: https://chat.deepseek.com/a/chat/s/822aa779-7172-4c12-8fa4-2c6ce20b1793 Platform: DeepSeek Created: 2025-12-29 21:37:"
+          },
+          "b": {
+            "filename": "chat-memo_2_20251213.md",
+            "chunk_id": 1,
+            "chunk_type": "user_message",
+            "preview": "[User问] Title: KK，你怎么看待你的这本书《失控》 我打算读一读它，因为它一定和你本人一样独特而精彩 URL: https://chat.deepseek.com/a/chat/s/822aa779-7172-4c12-8fa4-2c6ce20b1793 Platform: DeepSeek Created: 2025-12-12 15:48:"
+          }
+        }
+      ]
+    }
+  ],
+  "recommended_offline_candidate": {
+    "name": "strict_recommended",
+    "config": {
+      "name": "strict_recommended",
+      "sim_threshold": 0.97,
+      "len_ratio_min": 0.92,
+      "prefix_threshold": 0.93,
+      "min_chars": 180
+    },
+    "impact_summary": {
+      "candidate_pairs": 1,
+      "candidate_groups": 1,
+      "would_remove_chunks": 1,
+      "remove_ratio": 0.00813,
+      "quality_gate_passed_after_simulation": true,
+      "delta": {
+        "total_chunks_delta": -1,
+        "small_ratio_delta": 0.001733,
+        "large_ratio_delta": 0.001333,
+        "dup_ratio_proxy_delta": 0.0,
+        "avg_chars_delta": 4.08
+      }
+    },
+    "candidate_samples": [
+      {
+        "sim_ratio": 0.992084,
+        "len_ratio": 0.994737,
+        "prefix_ratio": 1.0,
+        "a": {
+          "filename": "chat-memo_1_20260105202854.md",
+          "chunk_id": 1,
+          "chunk_type": "user_message",
+          "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+        },
+        "b": {
+          "filename": "chat-memo_1_20260107142903.md",
+          "chunk_id": 1,
+          "chunk_type": "user_message",
+          "preview": "[User问] Title: 如果用几句话去说你印象里的凯文凯利，你会怎么说，你知道他说话的风格怎样的吗 URL: https://chat.deepseek.com/a/chat/s/6950aeeb-28e0-4056-b782-a672cf97acb6 Platform: DeepSeek Created: 2026-01-05 20:28:44 Me"
+        }
+      }
+    ],
+    "note": "Assessment only. Not integrated into runtime pipeline."
+  }
+}

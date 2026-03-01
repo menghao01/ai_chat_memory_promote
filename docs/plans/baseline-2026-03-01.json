@@ -1,0 +1,324 @@
+{
+  "generated_at_utc": "2026-03-01T09:38:55.213063+00:00",
+  "notes_dir": "D:/ai_memory_chat/notes",
+  "notes_files_count": 15,
+  "notes_files": [
+    "notes/24.07.22.md",
+    "notes/25.12.02.md",
+    "notes/25.12.06.md",
+    "notes/chat-memo_1_20251212.md",
+    "notes/chat-memo_1_20251229212539.md",
+    "notes/chat-memo_1_20251229213804.md",
+    "notes/chat-memo_1_20260105202854.md",
+    "notes/chat-memo_1_20260107142903.md",
+    "notes/chat-memo_1_20260110212909.md",
+    "notes/chat-memo_1_20260201095705.md",
+    "notes/chat-memo_1_20260224103915.md",
+    "notes/chat-memo_2_20251213.md",
+    "notes/daily-log-2025-12-05.md",
+    "notes/learning-goals.md",
+    "notes/project-ideas.md"
+  ],
+  "window": {
+    "min_chars": 120,
+    "target_chars": 500,
+    "max_chars": 1400
+  },
+  "pipelines": {
+    "coarse": {
+      "stats": {
+        "total_chunks": 29,
+        "small_chunks": 9,
+        "large_chunks": 9,
+        "avg_chars": 4168.31,
+        "dup_ratio_proxy": 0.0,
+        "ratios": {
+          "small_ratio": 0.310345,
+          "large_ratio": 0.310345,
+          "extreme_ratio": 0.62069
+        },
+        "distribution": {
+          "lt_min": 9,
+          "min_to_target": 8,
+          "target_to_max": 3,
+          "gt_max": 9
+        }
+      },
+      "quality_gate": {
+        "passed": true,
+        "failed_rules": [],
+        "ratios": {
+          "small_ratio": 0.3103448275862069,
+          "large_ratio": 0.3103448275862069,
+          "dup_ratio_proxy": 0.0
+        },
+        "thresholds": {
+          "small_ratio_max": 0.35,
+          "large_ratio_max": 0.35,
+          "dup_ratio_proxy_max": 0.4,
+          "min_total_chunks": 1
+        }
+      },
+      "top_extreme_files": [
+        {
+          "file": "notes/chat-memo_1_20251212.md",
+          "total_chunks": 1,
+          "small_chunks": 0,
+          "large_chunks": 1,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 1.0,
+            "extreme_ratio": 1.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20251229212539.md",
+          "total_chunks": 1,
+          "small_chunks": 0,
+          "large_chunks": 1,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 1.0,
+            "extreme_ratio": 1.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20251229213804.md",
+          "total_chunks": 1,
+          "small_chunks": 0,
+          "large_chunks": 1,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 1.0,
+            "extreme_ratio": 1.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20260105202854.md",
+          "total_chunks": 1,
+          "small_chunks": 0,
+          "large_chunks": 1,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 1.0,
+            "extreme_ratio": 1.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20260107142903.md",
+          "total_chunks": 1,
+          "small_chunks": 0,
+          "large_chunks": 1,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 1.0,
+            "extreme_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "size_only": {
+      "stats": {
+        "total_chunks": 110,
+        "small_chunks": 0,
+        "large_chunks": 0,
+        "avg_chars": 1097.66,
+        "dup_ratio_proxy": 0.163636,
+        "ratios": {
+          "small_ratio": 0.0,
+          "large_ratio": 0.0,
+          "extreme_ratio": 0.0
+        },
+        "distribution": {
+          "lt_min": 0,
+          "min_to_target": 23,
+          "target_to_max": 87,
+          "gt_max": 0
+        }
+      },
+      "quality_gate": {
+        "passed": true,
+        "failed_rules": [],
+        "ratios": {
+          "small_ratio": 0.0,
+          "large_ratio": 0.0,
+          "dup_ratio_proxy": 0.163636
+        },
+        "thresholds": {
+          "small_ratio_max": 0.35,
+          "large_ratio_max": 0.35,
+          "dup_ratio_proxy_max": 0.4,
+          "min_total_chunks": 1
+        }
+      },
+      "top_extreme_files": [
+        {
+          "file": "notes/chat-memo_2_20251213.md",
+          "total_chunks": 21,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20251212.md",
+          "total_chunks": 12,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20251229213804.md",
+          "total_chunks": 12,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20260107142903.md",
+          "total_chunks": 12,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20260201095705.md",
+          "total_chunks": 11,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        }
+      ]
+    },
+    "current": {
+      "stats": {
+        "total_chunks": 265,
+        "small_chunks": 0,
+        "large_chunks": 0,
+        "avg_chars": 454.44,
+        "dup_ratio_proxy": 0.196226,
+        "ratios": {
+          "small_ratio": 0.0,
+          "large_ratio": 0.0,
+          "extreme_ratio": 0.0
+        },
+        "distribution": {
+          "lt_min": 0,
+          "min_to_target": 258,
+          "target_to_max": 7,
+          "gt_max": 0
+        }
+      },
+      "quality_gate": {
+        "passed": true,
+        "failed_rules": [],
+        "ratios": {
+          "small_ratio": 0.0,
+          "large_ratio": 0.0,
+          "dup_ratio_proxy": 0.196226
+        },
+        "thresholds": {
+          "small_ratio_max": 0.35,
+          "large_ratio_max": 0.35,
+          "dup_ratio_proxy_max": 0.4,
+          "min_total_chunks": 1
+        }
+      },
+      "top_extreme_files": [
+        {
+          "file": "notes/chat-memo_2_20251213.md",
+          "total_chunks": 61,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20251212.md",
+          "total_chunks": 34,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20251229213804.md",
+          "total_chunks": 34,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20260201095705.md",
+          "total_chunks": 29,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        },
+        {
+          "file": "notes/chat-memo_1_20260224103915.md",
+          "total_chunks": 24,
+          "small_chunks": 0,
+          "large_chunks": 0,
+          "ratios": {
+            "small_ratio": 0.0,
+            "large_ratio": 0.0,
+            "extreme_ratio": 0.0
+          }
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "coarse_to_current": {
+      "small_ratio_delta": -0.310345,
+      "large_ratio_delta": -0.310345,
+      "extreme_ratio_delta": -0.62069,
+      "dup_ratio_proxy_delta": 0.196226,
+      "avg_chars_delta": -3713.87,
+      "total_chunks_delta": 236
+    },
+    "size_only_to_current": {
+      "small_ratio_delta": 0.0,
+      "large_ratio_delta": 0.0,
+      "extreme_ratio_delta": 0.0,
+      "dup_ratio_proxy_delta": 0.03259,
+      "avg_chars_delta": -643.22,
+      "total_chunks_delta": 155
+    }
+  },
+  "baseline_note": "Historical pre-wave snapshot is unavailable; use 'coarse' as structural baseline proxy and 'size_only' as pre-semantic baseline."
+}

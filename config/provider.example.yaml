@@ -1,0 +1,26 @@
+## Example 1: local default only (safe default)
+provider:
+  primary: local_default
+  fallback:
+  model:
+  timeout_ms: 60000
+  base_url:
+  api_key_env:
+
+## Example 2: openai primary + local_default fallback
+# provider:
+#   primary: openai
+#   fallback: local_default
+#   model: gpt-4.1-mini
+#   timeout_ms: 60000
+#   base_url:
+#   api_key_env: OPENAI_API_KEY
+
+## Example 3: openai_compatible with custom base_url
+# provider:
+#   primary: openai_compatible
+#   fallback: local_default
+#   model: qwen2.5:latest
+#   timeout_ms: 60000
+#   base_url: http://127.0.0.1:11434/v1
+#   api_key_env: OLLAMA_API_KEY
