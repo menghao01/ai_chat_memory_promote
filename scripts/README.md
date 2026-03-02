@@ -1,32 +1,30 @@
 # Scripts
 
-This folder contains core scripts for managing the vector database.
+This directory contains runtime scripts for chunking, indexing, and provider access.
 
-## Core Scripts (Keep These)
+## Main Entry Scripts
 
-### chunk_and_index.py
-**Purpose:** Full database rebuild
-**Usage:** `python chunk_and_index.py`
-**When to use:** First-time setup or when chunking strategies change
-**Warning:** Deletes existing database and rebuilds from scratch
+- `chunk_and_index.py`
+  - Full rebuild indexing flow.
+  - Use when chunking strategy changes or rebuilding from scratch.
 
-### incremental_update.py
-**Purpose:** Incremental updates (preserves existing data)
-**Usage:** `python incremental_update.py`
-**When to use:** Daily - when adding new notes to the database
-**Note:** This is the primary script for regular use
+- `incremental_update.py`
+  - Incremental indexing flow that preserves existing vectors.
+  - Use for daily note updates.
 
-### check_model.py
-**Purpose:** Verify model integrity
-**Usage:** `python check_model.py`
-**When to use:** Only when troubleshooting model issues
+- `check_model.py`
+  - Local embedding model cache validation utility.
+  - Use for troubleshooting model cache issues.
 
-## Guidelines
+## Subdirectories
 
-**Keep it clean:**
-- ✅ Only keep the 3 core scripts listed above
-- ❌ Delete temporary/debug scripts immediately after use
-- ❌ Do not commit one-time verification scripts
+- `core/`: shared core runtime modules (`chunk_schema`, `vector_indexer`)
+- `chunking/`: chunk quality and splitting utilities
+- `providers/`: provider abstraction and transport layers
 
-**Why?**
-A clean scripts folder prevents confusion about which scripts to use for regular maintenance.
+## Verification
+
+```bash
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
