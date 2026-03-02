@@ -236,8 +236,12 @@ def chunk_note_file(filepath: str) -> List[Chunk]:
         filename = Path(filepath).name
         filepath_str = str(Path(filepath).absolute())
 
-        # Detect format by checking content patterns
+        filename_lower = filename.lower()
+
+        # Detect format by checking file naming and content patterns.
+        # Some chat memo exports are truncated and miss header markers.
         is_chat_memo = (
+            filename_lower.startswith("chat-memo_") or
             'Chat Memo' in content[:200] or
             'Total Conversations:' in content[:500] or
             re.search(r'Platform:\s*(DeepSeek|ChatGPT|Claude)', content[:500])
