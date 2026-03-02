@@ -40,7 +40,7 @@ def get_chunk_id(chunk: Dict) -> str:
     filename = chunk['metadata'].get('filename', '')
     chunk_id = chunk['metadata'].get('chunk_id', 0)
     content = _normalize_content_for_id(chunk.get('content', ''))
-    digest = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16]
+    digest = hashlib.sha256(content.encode("utf-8")).hexdigest()
 
     # Create unique ID
     unique_str = f"{filename}_{chunk_id}_{len(content)}_{digest}"
