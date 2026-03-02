@@ -12,15 +12,11 @@ Supported formats:
 - Standard Markdown: Documents with ## headers
 """
 
-import sys
 from pathlib import Path
 from typing import List, Dict
 import re
 
-# Import provided utilities
-sys.path.insert(0, str(Path(__file__).parent.parent / ".claude/skills/ai-partner-chat/scripts"))
-
-from chunk_schema import Chunk, validate_chunk
+from scripts.core.chunk_schema import Chunk, validate_chunk
 
 try:
     from scripts.chunking.deduplicate import deduplicate_exact_chunks
@@ -279,7 +275,7 @@ def chunk_note_file(filepath: str) -> List[Chunk]:
 def main():
     """Main function to initialize vector database."""
     print("Initializing AI Partner Chat vector database...")
-    from vector_indexer import VectorIndexer
+    from scripts.core.vector_indexer import VectorIndexer
 
     # Initialize vector database
     indexer = VectorIndexer(db_path="./vector_db")
