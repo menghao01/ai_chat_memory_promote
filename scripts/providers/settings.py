@@ -3,7 +3,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional
 
-import yaml
+try:
+    import yaml
+except ModuleNotFoundError:  # pragma: no cover - fallback used in minimal environments
+    yaml = None
 
 from scripts.providers.contracts import AuthConfig, ConversationRequest, EndpointConfig
 
@@ -75,6 +78,57 @@ def _normalize_timeout_ms(timeout_ms: int) -> int:
     return timeout_ms
 
 
+
+
+def _parse_scalar(value: str) -> Any:
+    text = value.strip()
+    if text == "":
+        return ""
+    if text.isdigit() or (text.startswith("-") and text[1:].isdigit()):
+        return int(text)
+    return text
+
+
+def _simple_yaml_mapping(text: str) -> Dict[str, Any]:
+    root: Dict[str, Any] = {}
+    stack: List[tuple[int, Dict[str, Any]]] = [(-1, root)]
+
+    for raw_line in text.splitlines():
+        line = raw_line.rstrip()
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+
+        indent = len(line) - len(line.lstrip(" "))
+        stripped = line.strip()
+        if ":" not in stripped:
+            continue
+
+        key, raw_value = stripped.split(":", 1)
+        key = key.strip()
+        value = raw_value.strip()
+
+        while stack and indent <= stack[-1][0]:
+            stack.pop()
+        parent = stack[-1][1]
+
+        if value == "":
+            child: Dict[str, Any] = {}
+            parent[key] = child
+            stack.append((indent, child))
+        else:
+            parent[key] = _parse_scalar(value)
+
+    return root
+
+
+def _safe_load_yaml(text: str) -> Dict[str, Any]:
+    if yaml is not None:
+        loaded = yaml.safe_load(text) or {}
+        if not isinstance(loaded, dict):
+            raise ValueError("Provider config must be a mapping")
+        return loaded
+    return _simple_yaml_mapping(text)
+
 def _read_yaml_file(config_path: Optional[str]) -> Dict[str, Any]:
     if not config_path:
         return {}
@@ -84,7 +138,7 @@ def _read_yaml_file(config_path: Optional[str]) -> Dict[str, Any]:
         return {}
 
     with path.open("r", encoding="utf-8") as handle:
-        loaded = yaml.safe_load(handle) or {}
+        loaded = _safe_load_yaml(handle.read())
     if not isinstance(loaded, dict):
         raise ValueError(f"Provider config must be a mapping: {config_path}")
     return loaded
