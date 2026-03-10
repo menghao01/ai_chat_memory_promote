@@ -263,3 +263,11 @@
 - Actionable outcome:
   - Code + tests + docs are in final checkpoint state.
   - If repository context is restored, next action is to run branch integration options there.
+
+## Historical Snapshot Notice (2026-03-02)
+
+- This handoff file is a historical checkpoint log and may lag behind active implementation.
+- Current source-of-truth documents are:
+  - `README.md`
+  - `docs/CURRENT_STATUS.md`
+  - `docs/plans/2026-03-02-agent-friendly-hardening-plan.md`

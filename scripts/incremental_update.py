@@ -5,16 +5,12 @@ Incremental update for vector database - preserves existing data.
 This script adds new notes to the database without deleting existing ones.
 """
 
-import sys
 import hashlib
 import re
 from pathlib import Path
 from typing import List, Dict
 
-# Import skill utilities
-sys.path.insert(0, str(Path(__file__).parent.parent / ".claude/skills/ai-partner-chat/scripts"))
-
-from chunk_schema import Chunk, validate_chunk
+from scripts.core.chunk_schema import Chunk, validate_chunk
 
 
 def get_local_model_path():
@@ -44,7 +40,7 @@ def get_chunk_id(chunk: Dict) -> str:
     filename = chunk['metadata'].get('filename', '')
     chunk_id = chunk['metadata'].get('chunk_id', 0)
     content = _normalize_content_for_id(chunk.get('content', ''))
-    digest = hashlib.sha256(content.encode("utf-8")).hexdigest()[:16]
+    digest = hashlib.sha256(content.encode("utf-8")).hexdigest()
 
     # Create unique ID
     unique_str = f"{filename}_{chunk_id}_{len(content)}_{digest}"
@@ -160,7 +156,7 @@ def chunk_note_file(filepath: str) -> List[Dict]:
     """Import chunking logic."""
     # Import here to avoid circular dependency
     import importlib
-    chunk_module = importlib.import_module('chunk_and_index')
+    chunk_module = importlib.import_module("scripts.chunk_and_index")
     return chunk_module.chunk_note_file(filepath)
 
 
